@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import Alert from "./components/Alert";
 import { useState } from "react";
-// import Accordian from "./components/Accordian";
-// import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import Accordian from "./components/Accordian";
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
 
 function App() {
   const [btnTxt, setbtnTxt] = useState("Enable Darkmode");
@@ -44,7 +44,7 @@ function App() {
 
   return (
     <>
-      {/* <BrowserRouter> */}
+      <BrowserRouter>
         <Navbar
           title="MY APP"
           aboutText="about us"
@@ -56,18 +56,18 @@ function App() {
       
         <Alert alrt={alert} />
 
-        {/* <Routes> */}
-          {/* <Route exact path="/" element={ } /> */}
-          <Textform                 //we can also use path instead of exact path.
+        <Routes>
+           <Route exact path="/" element={<Textform                // we can also use path instead of exact path.
               heading="ENTER YOUR TEXT TO ANALYZE"
               mode={Mode}
               shwAlrt={showAlert}
-            />
-           {/* <Route exact path="about" element={} /> */}
-           {/* <Accordian mode={Mode}/> */}
-        {/* </Routes> */}
+            /> } />
+          
+           <Route exact path="about" element={<Accordian mode={Mode}/>} />
+           
+        </Routes>
       
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }
