@@ -56,14 +56,23 @@ function App() {
       
         <Alert alrt={alert} />
 
+      
+
         <Routes>
-           <Route exact path="/" element={<Textform                // we can also use path instead of exact path.
+
+        <Route path="my-app" element={<Textform                // we can also use exact path instead of path.
+              heading="ENTER YOUR TEXT TO ANALYZE"
+              mode={Mode}
+              shwAlrt={showAlert}
+            /> } />
+        
+           <Route path="home" element={<Textform                // we can also use exact path instead of path.
               heading="ENTER YOUR TEXT TO ANALYZE"
               mode={Mode}
               shwAlrt={showAlert}
             /> } />
           
-           <Route exact path="about" element={<Accordian mode={Mode}/>} />
+           <Route exact path="about" element={<Accordian mode={Mode}/>} />    
            
         </Routes>
       
