@@ -57,16 +57,9 @@ function App() {
         <Alert alrt={alert} />
 
       
-
         <Routes>
 
-        <Route path="my-app" element={<Textform                // we can also use exact path instead of path.
-              heading="ENTER YOUR TEXT TO ANALYZE"
-              mode={Mode}
-              shwAlrt={showAlert}
-            /> } />
-        
-           <Route path="home" element={<Textform                // we can also use exact path instead of path.
+           <Route path="/" element={<Textform                // we can also use exact path instead of path.
               heading="ENTER YOUR TEXT TO ANALYZE"
               mode={Mode}
               shwAlrt={showAlert}
